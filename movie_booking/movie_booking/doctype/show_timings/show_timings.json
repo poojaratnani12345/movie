@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{movie_name}-time-{##}",
+ "creation": "2025-01-23 16:31:42.696132",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "movie_name",
+  "cinema_hall",
+  "show_time",
+  "available_seats",
+  "total_seats"
+ ],
+ "fields": [
+  {
+   "fieldname": "cinema_hall",
+   "fieldtype": "Link",
+   "label": "Cinema Hall\t",
+   "options": "Cinema_hall"
+  },
+  {
+   "fieldname": "show_time",
+   "fieldtype": "Datetime",
+   "label": "Show Time\t"
+  },
+  {
+   "fieldname": "available_seats",
+   "fieldtype": "Int",
+   "label": "Available Seats\t"
+  },
+  {
+   "fieldname": "movie_name",
+   "fieldtype": "Link",
+   "label": "Movie",
+   "options": "Movies"
+  },
+  {
+   "fetch_from": "cinema_hall.capacity",
+   "fieldname": "total_seats",
+   "fieldtype": "Data",
+   "label": "Total seats",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-24 17:24:48.999517",
+ "modified_by": "Administrator",
+ "module": "movie_booking",
+ "name": "Show Timings",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Viewer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

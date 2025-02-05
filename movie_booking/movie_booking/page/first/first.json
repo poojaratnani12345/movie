@@ -1,0 +1,24 @@
+{
+ "content": null,
+ "creation": "2025-01-24 11:43:53.859146",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-01-24 11:46:05.087517",
+ "modified_by": "Administrator",
+ "module": "movie_booking",
+ "name": "first",
+ "owner": "Administrator",
+ "page_name": "first",
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Viewer"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "user_page"
+}
