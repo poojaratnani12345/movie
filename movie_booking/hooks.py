@@ -9,12 +9,9 @@ doc_events = {
     "Bookings": {
         "validate": "movie_booking.movie_booking.doctype.bookings.bookings.validate",
         "on_submit": "movie_booking.movie_booking.doctype.bookings.bookings.on_submit",
-        "on_cancel": "movie_booking.movie_booking.doctype.bookings.bookings.on_cancel"
     }
 }
-override_whitelisted_methods = {
-    "delete_booking": "movie_booking.movie_booking.doctype.bookings.bookings.delete_booking"
-}
+
 # Add any additional hooks as needed
 
 # Apps

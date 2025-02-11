@@ -32,3 +32,26 @@ frappe.ui.form.on('Bookings', {
         });
     }
 });
+frappe.ui.form.on('Bookings', {
+    payment_method: function (frm) {
+        if (frm.doc.payment_method === "Credit Card") {
+            // Show and make credit card fields required
+            frm.set_df_property("card_number", "hidden", 0);
+            frm.set_df_property("expiry_date", "hidden", 0);
+            frm.set_df_property("cvv", "hidden", 0);
+
+            frm.set_df_property("card_number", "reqd", 1);
+            frm.set_df_property("exp_date", "reqd", 1);
+            frm.set_df_property("cvv", "reqd", 1);
+        } else {
+            // Hide and make credit card fields non-required for other payment methods
+            frm.set_df_property("card_number", "hidden", 1);
+            frm.set_df_property("expiry_date", "hidden", 1);
+            frm.set_df_property("cvv", "hidden", 1);
+
+            frm.set_df_property("card_number", "reqd", 0);
+            frm.set_df_property("expiry_date", "reqd", 0);
+            frm.set_df_property("cvv", "reqd", 0);
+        }
+    }
+});
